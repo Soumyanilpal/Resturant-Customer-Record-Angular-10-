@@ -1,0 +1,89 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Soumyanil",
+      "email": "palsoumyanil1@gmail.com",
+      "mobile": "7300382044",
+      "address": "Rajasthan",
+      "service": "Cold Coffee",
+      "amount": "10"
+    },
+    {
+      "id": 2,
+      "name": "Rahul",
+      "email": "rahul@gmail.com",
+      "mobile": "874589658",
+      "address": "Jharkhand",
+      "service": "Coffee",
+      "amount": "25"
+    },
+    {
+      "id": 3,
+      "name": "Mehul",
+      "email": "mehul@gmail.com",
+      "mobile": "7541256328",
+      "address": "Gujarat",
+      "service": "Masala Tea",
+      "amount": "15"
+    },
+    {
+      "id": 4,
+      "name": "Abhijeet",
+      "email": "abhi@gmail.com",
+      "mobile": "7893652145",
+      "address": "Nashik",
+      "service": "Vada Pav",
+      "amount": "20"
+    },
+    {
+      "id": 5,
+      "name": "Shriraj",
+      "email": "shri@gmail.com",
+      "mobile": "8523698745",
+      "address": "Shirdi",
+      "service": "Bhurji Pav",
+      "amount": "50"
+    },
+    {
+      "id": 6,
+      "name": "Nikhil",
+      "email": "nikhil@gmail.com",
+      "mobile": "8741256369",
+      "address": "Null Stop",
+      "service": "Cold Coffee",
+      "amount": "30"
+    },
+    {
+      "id": 7,
+      "name": "Shreya",
+      "email": "shreya@gmail.com",
+      "mobile": "8797785478",
+      "address": "Ahamadnagar",
+      "service": "French Fries",
+      "amount": "80"
+    },
+    {
+      "id": 8,
+      "name": "Manasi",
+      "email": "manasi@gmail.com",
+      "mobile": "7589654874",
+      "address": "Pune",
+      "service": "Masala Maggi",
+      "amount": "50"
+    },
+    {
+      "id": 9,
+      "name": "Upendra",
+      "email": "upendra@gmail.com",
+      "mobile": "9658745896",
+      "address": "Pune",
+      "service": "Cheese Burst Pizza",
+      "amount": "150"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
