@@ -1,0 +1,108 @@
+<!--Nav Bar-->
+
+<nav class="navbar bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" style="color:cornsilk">Customers Record</a>
+        <button (click)=" clickAddRestro()" type="button" class="btn btn-success" data-bs-toggle="modal"
+            data-bs-target="#exampleModal" style="color:white" type="submit">Add Customers</button>
+    </div>
+</nav>
+
+<!--Jumbotron-->
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Fast Food Katta</h1>
+        <p class="col-md-8 fs-4">Get Your Cravings Away With Delicious Authentic Taste !!!</p>
+        <a class="btn btn-primary btn-lg" target="_blank" type="button"
+            href="https://www.instagram.com/btw_soumyanil/">Follow Us On
+            Instagram</a>
+    </div>
+
+    <!--Table Shown-->
+
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">Resturant ID</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobile Number</th>
+                <th scope="col">Address</th>
+                <th scope="col">Services</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of allResturantData">
+                <td>{{data.id}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.mobile}}</td>
+                <td>{{data.address}}</td>
+                <td>{{data.service}}</td>
+                <td>{{data.amount}}</td>
+                <td>
+                    <button (click)="onEditRestro(data)" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        class="btn btn-info">Edit</button>&nbsp;
+                    <button (click)="deleteRestro(data)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resturant Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="formValue">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Name</label>
+                            <input type="text" formControlName="name" class="form-control" placeholder="Enter Name"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Email Id</label>
+                            <input type="text" formControlName="email" class="form-control" placeholder="Enter Email Id"
+                                id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Mobile</label>
+                            <input type="text" formControlName="mobile" class="form-control"
+                                placeholder="Enter Mobile Number" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Address</label>
+                            <input type="text" formControlName="address" class="form-control"
+                                placeholder="Enter Address" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Service</label>
+                            <input type="text" formControlName="service" class="form-control"
+                                placeholder="Enter Service Like Chai Coffee" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Amount</label>
+                            <input type="text" formControlName="amount" class="form-control" placeholder="Enter Amount"
+                                id="exampleInputPassword1">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                    <button *ngIf="showAdd" type="button" class="btn btn-primary" (click)="addResturant()">Add
+                    </button>
+                    <button *ngIf="showBtn" type="button" class="btn btn-primary" (click)="updateResto()">Update
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
